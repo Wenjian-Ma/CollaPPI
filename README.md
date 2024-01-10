@@ -57,4 +57,4 @@ We retrained the baseline method, Struct2Graph, with its default parameters usin
 
 3. If you want to retrain the Struct2Graph on the yeast dataset in our paper:
 
-  Under the path of Struct2Graph-master/ :  `python train.py`
+  Under the path of Struct2Graph-master/ :  `python k-fold-CV.py`
