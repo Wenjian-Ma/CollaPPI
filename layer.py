@@ -58,13 +58,14 @@ class MV_PPI_Block(nn.Module):
 
         m1 = splited_h1.size()[0]
         m2 = splited_h2.size()[0]
-
+        ######################################
         c1 = splited_h1.repeat(1, m2).view(m1, m2, self.dim)
         c2 = splited_h2.repeat(m1, 1).view(m1, m2, self.dim)
 
-        d = torch.tanh(c1 + c2)
+        d = torch.tanh(c1 + c2)#*
         alpha = torch.matmul(d, self.w).view(m1, m2)
-
+        #######################################
+        #alpha = torch.tanh(torch.mm(splited_h1,torch.t(splited_h2)))
         b1 = torch.mean(alpha, 1)
         p1 = torch.softmax(b1, 0)
         s1 = torch.matmul(torch.t(splited_h1), p1).view(1, -1)
