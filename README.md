@@ -45,9 +45,9 @@ Test
 ---
 `python test.py` used to reproduct the performence recorded in the paper.
 
-`python test_mul.py` multiplication for mutual interaction, tranined model can be available at the [Link](https://pan.baidu.com/s/1QgK3w80w08U_Ywl3aBwc3w?pwd=1234).
+`python test_mul.py` multiplication for mutual interaction. Tranined model can be available at the [Link](https://pan.baidu.com/s/1QgK3w80w08U_Ywl3aBwc3w?pwd=1234), which is evaluated on yeast dataset.
 
-`python test_tran_mul.py` Transposed multiplication for mutual interaction, trained model can be available at the 
+`python test_tran_mul.py` Transposed multiplication for mutual interaction. Trained model can be available at the [Link](https://pan.baidu.com/s/1E_t8KWFyZfQvo9qCxb25Ag?pwd=1234), which is evaluated on yeast dataset.
 
 Baseline
 ---
