@@ -42,9 +42,9 @@ def cal_metric_test(pred,label,score,args):
         con_matrix=None
         test_spec=None
         test_mcc=None
-    np.save('/home/sgzhang/perl5/MV-PPI/data/AUROC_Fig/' + args.dataset + '/label.npy',
+    #np.save('/home/sgzhang/perl5/MV-PPI/data/AUROC_Fig/' + args.dataset + '/label.npy',
             np.array(label))
-    np.save('/home/sgzhang/perl5/MV-PPI/data/AUROC_Fig/' + args.dataset + '/score.npy',
+    #np.save('/home/sgzhang/perl5/MV-PPI/data/AUROC_Fig/' + args.dataset + '/score.npy',
             np.array(score))
     test_acc = accuracy_score(label, pred)#
     test_prec = precision_score(label, pred,average=average)#,average='micro'
