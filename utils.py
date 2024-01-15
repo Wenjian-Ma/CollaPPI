@@ -11,14 +11,14 @@ def load_dataset(dataset='yeast',mark='train',args=None):
     elif dataset == 'multi_class':
         split_mark = ' '
     if dataset != 'multi_species':
-        with open('/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/actions/'+mark+'_cmap.actions.tsv') as f:
+        with open('./data/'+dataset+'/actions/'+mark+'_cmap.actions.tsv') as f:
             for line in f:
                 prot1 = line.strip().split(split_mark)[0]
                 prot2 = line.strip().split(split_mark)[1]
                 interaction = line.strip().split(split_mark)[2]
                 data.append([prot1, prot2, interaction])
     elif dataset == 'multi_species':
-        with open('/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/actions/'+mark+'-multi-'+args.identity+'.tsv') as f:
+        with open('./data/'+dataset+'/actions/'+mark+'-multi-'+args.identity+'.tsv') as f:
             for line in f:
                 prot1 = line.strip().split(split_mark)[0]
                 prot2 = line.strip().split(split_mark)[1]
@@ -33,14 +33,14 @@ def load_files(dataset='yeast'):
     split_mark = '.npy'
 
 
-    contact_path = '/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/dictionary/contact_map_8.0/'
+    contact_path = './data/'+dataset+'/dictionary/contact_map_8.0/'
     contact_files = os.listdir(contact_path)
     contact_items = {}
     for i in tqdm(contact_files, desc='loading protein graph', leave=False):
         uid = i.split(split_mark)[0]
         contact_items[uid] = np.load(contact_path + i)
 
-    lm_path = '/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/dictionary/pretrained-emb-esm-2/'
+    lm_path = './data/'+dataset+'/dictionary/pretrained-emb-esm-2/'
     lm_files = os.listdir(lm_path)
     lm_items = {}
     for i in tqdm(lm_files, desc='loading feature files', leave=False):
@@ -48,7 +48,7 @@ def load_files(dataset='yeast'):
         lm_items[uid] = np.load(lm_path + i)
 
     ###########load GO-terms label
-    GO_terms_path = '/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/dictionary/GO_terms_label/'
+    GO_terms_path = './data/'+dataset+'/dictionary/GO_terms_label/'
     GO_files = os.listdir(GO_terms_path)
     GO_items = {}
     for i in tqdm(GO_files, desc='loading GO terms', leave=False):
@@ -56,7 +56,7 @@ def load_files(dataset='yeast'):
         GO_items[uid] = np.load(GO_terms_path+i)
     ###########
     ############load location label
-    location_path = '/home/sgzhang/perl5/MV-PPI/data/'+dataset+'/dictionary/location_label/'
+    location_path = './data/'+dataset+'/dictionary/location_label/'
     location_files = os.listdir(location_path)
     location_items = {}
     for i in tqdm(location_files, desc='loading locations', leave=False):
