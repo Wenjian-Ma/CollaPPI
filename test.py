@@ -15,9 +15,9 @@ def test(args):
     test_data = PPIDataset(data=test_items, contact_dic=contact_dic, lm_dic=lm_dic, GO_dic=GO_dic,location_dic=location_dic)
     dataset_test = DataLoader(test_data, shuffle=False, batch_size=args.batch_size, collate_fn=collate, drop_last=False,num_workers=6)
     if args.dataset == 'yeast' or args.dataset == 'multi_class':
-        model_path = '/home/sgzhang/perl5/MV-PPI/data/'+args.dataset+'/dictionary/models/'+args.dataset+'_model.pt'
+        model_path = './data/'+args.dataset+'/dictionary/models/'+args.dataset+'_model.pt'
     elif args.dataset == 'multi_species':
-        model_path = '/home/sgzhang/perl5/MV-PPI/data/' + args.dataset + '/dictionary/models/' + args.dataset + '_'+args.identity+'_model.pt'
+        model_path = './data/' + args.dataset + '/dictionary/models/' + args.dataset + '_'+args.identity+'_model.pt'
     params_dict = torch.load(model_path)
     if args.dataset == 'yeast' or args.dataset == 'multi_species':
         model = nnModel(feature_dim=args.feat_dim, heads=args.heads).to(device)
