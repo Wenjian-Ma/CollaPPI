@@ -51,6 +51,16 @@ Test
 
 Baseline
 ---
+
+TAGPPI: [https://github.com/xzenglab/TAGPPI](https://github.com/xzenglab/TAGPPI).
+
+PIPR: [https://github.com/muhaochen/seq_ppi](https://github.com/muhaochen/seq_ppi).
+
+Struct2Graph: [https://github.com/baranwa2/Struct2Graph](https://github.com/baranwa2/Struct2Graph).
+
+DPPI: [https://github.com/hashemifar/DPPI/](https://github.com/hashemifar/DPPI/).
+
+
 We retrained the baseline method, Struct2Graph, with its default parameters using the yeast dataset in our paper.
 
 1. The preprocessed data in yeast dataset used for Struct2Graph can be available at the [Link](https://pan.baidu.com/s/1mrJ5HQ2wMp1Wv0D3YI72Cg?pwd=1234).
