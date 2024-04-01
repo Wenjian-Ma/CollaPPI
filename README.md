@@ -72,3 +72,19 @@ We retrained the baseline method, Struct2Graph, with its default parameters usin
 3. If you want to retrain the Struct2Graph on the yeast dataset in our paper:
 
     Under the path of Struct2Graph-master/ :  `python k-fold-CV.py`
+
+Cite our work
+---
+if you use the conclusion, code, or data in our work, please cite:
+```
+@ARTICLE{10465250,
+  author={Ma, Wenjian and Bi, Xiangpeng and Jiang, Huasen and Zhang, Shugang and Wei, Zhiqiang},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={CollaPPI: A Collaborative Learning Framework for Predicting Protein-Protein Interactions}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Proteins;Collaboration;Task analysis;Feature extraction;Protein engineering;Deep learning;Vectors;protein-protein interaction;multi-task learning;graph neural network;protein representation learning},
+  doi={10.1109/JBHI.2024.3375621}}
+```
