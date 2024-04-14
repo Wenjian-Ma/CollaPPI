@@ -27,7 +27,7 @@ numpy == 1.21.5
 
 Data preparation
 ---
-1. The relevant data and trained model of _yeast_ (~6.14G) can be available at the [Link](https://pan.baidu.com/s/1kknFC2gpayvxLM_1sqwO7w?pwd=1234).
+1. The relevant data and trained model of _yeast_ (~6.14G) can be available at the [Link](https://pan.baidu.com/s/1kknFC2gpayvxLM_1sqwO7w?pwd=1234) and [Link](https://pan.baidu.com/s/10235SAt1oknq8TmtOosQiA?pwd=1234).
 
 2. The relevant data and trained model of _multi-species_ (~24.16G) can be available at the [Link](https://pan.baidu.com/s/1kQHXCAQxzNO5peLqJni8xg?pwd=1234).
 
